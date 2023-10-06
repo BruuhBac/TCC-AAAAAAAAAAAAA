@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Menu</title>
+</head>
+<body>
+    <aside class="menulateral">
+        <header class="menulateral-header">
+            <a href="index.html">
+                <img class="logo-img" src="logo.png" alt="Logo">
+            </a>
+            
+            <p>Dra. Priscilla Herrera Silva</p>
+            <p>CRP: 122997</p>
+        </header>
+    
+        <nav>
+            <button onclick="window.location.href='pacientes.php'">
+                <span>Lista de Pacientes</span>
+            </button>
+    
+    
+            <button onclick="window.location.href='financeiro.php'">
+                <span>Tabela Financeira</span>
+            </button>                
+    
+            <button onclick="window.location.href='cadastrar.html'">
+                <span>Cadastro de Pacientes</span>
+            </button>
+    
+            <button onclick="window.location.href='anotacao.php'">
+                <span>Anotações das Consultas</span>
+            </button>
+            
+            <button onclick="window.location.href='calendario.html'">
+                <span>Agendar Consultas</span>
+            </button>
+            
+            <button onclick="window.location.href='visualizarcalendario.php'">
+                <span>Visualizar Consultas </span>
+            </button>
+        </nav>
+    </aside>
+
+    <main class="main">
+        <h1>Cadastrar Pacientes</h1>
+
+        <form action="cadastro.php" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required><br>
+            
+            <label for="idade">Idade:</label>
+            <input type="text" id="idade" name="idade" required><br>
+            
+            <label for="data_nascimento">Data de Nascimento:</label>
+            <input type="date" id="data_nascimento" name="data_nascimento" required><br>
+            
+            <label for="sexo">Sexo:</label>
+            <input type="text" id="sexo" name="sexo" required><br>
+
+            <label for="tipo_pagamento">Pagamento:</label>
+            <select id="tipo_pagamento" name="tipo_pagamento" required>
+                <option value="Pagamento Semanal">Pagamento Semanal</option>
+                <option value="Pagamento por Consulta">Pagamento por Consulta</option>
+                <option value="Pagamento Mensal">Pagamento Mensal</option>
+                <option value="Pagamento Quinzenal">Pagamento Quinzenal</option>
+            </select>
+            <br>
+            <label for="naturalidade">Naturalidade:</label>
+            <input type="text" id="naturalidade" name="naturalidade" required><br>
+
+            <label for="estado">Estado:</label>
+            <select id="estado" name="estado" required>
+                <option value="AC">Acre (AC)</option>
+                <option value="AL">Alagoas (AL)</option>
+                <option value="AP">Amapá (AP)</option>
+                <option value="AM">Amazonas (AM)</option>
+                <option value="BA">Bahia (BA)</option>
+                <option value="CE">Ceará (CE)</option>
+                <option value="DF">Distrito Federal (DF)</option>
+                <option value="ES">Espírito Santo (ES)</option>
+                <option value="GO">Goiás (GO)</option>
+                <option value="MA">Maranhão (MA)</option>
+                <option value="MT">Mato Grosso (MT)</option>
+                <option value="MS">Mato Grosso do Sul (MS)</option>
+                <option value="MG">Minas Gerais (MG)</option>
+                <option value="PA">Pará (PA)</option>
+                <option value="PB">Paraíba (PB)</option>
+                <option value="PR">Paraná (PR)</option>
+                <option value="PE">Pernambuco (PE)</option>
+                <option value="PI">Piauí (PI)</option>
+                <option value="RJ">Rio de Janeiro (RJ)</option>
+                <option value="RN">Rio Grande do Norte (RN)</option>
+                <option value="RS">Rio Grande do Sul (RS)</option>
+                <option value="RO">Rondônia (RO)</option>
+                <option value="RR">Roraima (RR)</option>
+                <option value="SC">Santa Catarina (SC)</option>
+                <option value="SP">São Paulo (SP)</option>
+                <option value="SE">Sergipe (SE)</option>
+                <option value="TO">Tocantins (TO)</option>
+            </select><br>
+            
+
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" name="endereco" required><br>
+
+            <label for="escolaridade">Escolaridade:</label>
+            <input type="text" id="escolaridade" name="escolaridade" required><br>
+            
+            <label for="escola">Escola:</label>
+            <input type="text" id="escola" name="escola" required><br>
+            
+            <label for="pai">Pai:</label>
+            <input type="text" id="pai" name="pai" required><br>
+
+            <label for="idade_pai">Idade do Pai:</label>
+            <input type="text" id="idade_pai" name="idade_pai" required><br>
+
+            <label for="mae">Mãe:</label>
+            <input type="text" id="mae" name="mae" required><br> 
+
+            <label for="idade_mae">Idade da Mãe:</label>
+            <input type="text" id="idade_mae" name="idade_mae" required><br>  
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required><br>
+            
+            <label for="telefone">Número de Telefone:</label>
+            <input type="text" id="telefone" name="telefone" required><br>
+            
+            <input type="submit" id="cadastrarBtn" value="Cadastrar">
+            <button id="voltarBtn">Voltar à Tela Inicial</button>
+            
+
+        </form>
+    </main>
+    <script>
+        // Adiciona um evento de clique ao botão
+        document.getElementById('voltarBtn').addEventListener('click', function () {
+            // Exibe uma caixa de diálogo de confirmação
+            if (confirm('Você tem certeza que deseja voltar à Tela Inicial?')) {
+                // Se o usuário confirmar, redireciona para a página inicial
+                window.location.href = 'index.html';
+            }
+        });
+    </script>
+</body>
+</html>

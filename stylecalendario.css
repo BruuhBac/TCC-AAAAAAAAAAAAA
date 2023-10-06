@@ -1,0 +1,53 @@
+/* Estilos CSS para o calendário */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.calendario {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.mes {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.dia-semana {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.dia-fora {
+    color: #ccc;
+}
+
+/* Estilos para destacar o dia atual */
+td.today {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+}

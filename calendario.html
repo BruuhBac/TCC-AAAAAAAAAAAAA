@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Menu</title>
+</head>
+<body>
+    <main class="main">
+        <h1>Agendamento de Consultas</h1>  
+        <form action="agend.php" method="post" onsubmit="return validateForm()">
+            <label for="nome">Id do Paciente:</label>
+            <input type="text" id="nome" name="nome" required>
+            <br>
+            <label for="data">Data da Consulta:</label>
+            <input type="date" id="data_consulta" name="data_consulta" required>
+            <br>
+            <label for="hora">Hora da Consulta:</label>
+            <input type="time" id="hora_consulta" name="hora_consulta" required>
+
+            <div class="button-container">
+                <input type="submit" value="Agendar Consulta">
+            </div>
+        </form>
+        <button onclick="window.location.href='index.html'">
+            <span>Voltar</span>
+        </button>      
+    </main>
+    <aside class="menulateral">
+        <header class="menulateral-header">
+            <a href="index.html">
+                <img class="logo-img" src="logo.png" alt="Logo">
+            </a>
+            
+            <p>Dra. Priscilla Herrera Silva</p>
+            <p>CRP: 122997</p>
+        </header>
+    
+        <nav>
+            <button onclick="window.location.href='pacientes.php'">
+                <span>Lista de Pacientes</span>
+            </button>
+    
+    
+            <button onclick="window.location.href='financeiro.php'">
+                <span>Tabela Financeira</span>
+            </button>                
+    
+            <button onclick="window.location.href='cadastrar.html'">
+                <span>Cadastro de Pacientes</span>
+            </button>
+    
+            <button onclick="window.location.href='anotacao.php'">
+                <span>Anotações das Consultas</span>
+            </button>
+            
+            <button onclick="window.location.href='calendario.html'">
+                <span>Agendar Consultas</span>
+            </button>
+            
+            <button onclick="window.location.href='visualizarcalendario.php'">
+                <span>Visualizar Consultas </span>
+            </button>
+        </nav>
+    </aside>
+    <script>
+        function validateForm() {
+            var selectedDate = document.getElementById("data").value;
+            var selectedTime = document.getElementById("hora").value;
+            var selectedName = document.getElementById("nome").value;
+
+
+            return true; 
+        }
+    </script>
+</body>
+</html>
